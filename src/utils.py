@@ -70,7 +70,7 @@ def get_mem0_client():
             "provider": "openai",
             "config": {
                 "model": embedding_model or "text-embedding-3-small",
-                "embedding_dims": 1536,  # Default for text-embedding-3-small
+                "embedding_dims": os.getenv("EMBEDDING_DIMS"),  # Default for text-embedding-3-small
             },
         }
 
